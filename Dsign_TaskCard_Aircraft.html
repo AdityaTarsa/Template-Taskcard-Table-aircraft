@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <link rel="stylesheet" href="./interface.css" /> -->
+    <style>
+      /* Print Style */
+      .task-no {
+        string-set: title content(text);
+      }
+      .chapter {
+        page-break-before: always;
+        text-align: center;
+      }
+
+      @page {
+        /* Adjust Margin */
+        margin: 10mm;
+
+        size: A4;
+        @bottom-left {
+          content: string(title);
+        }
+        @bottom-right {
+          content: "Page " counter(page) " of " counter(pages);
+        }
+      }
+      .pagedjs_margin-content {
+        color: grey;
+        font-style: 11px;
+      }
+
+      /* HTML STYLE */
+      * {
+        font-size: 12px;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      table,
+      table td {
+        border: 1px solid grey;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      tr td,
+      tr th {
+        padding: 10px;
+      }
+      .chapter .general-tr:has(th) {
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+      }
+      .chapter .general-tr th,
+      .chapter .general-tr td {
+        border: none;
+        text-align: left;
+      }
+
+      .chapter .general-tr:has(td):nth-child(odd) {
+        background: rgb(237, 237, 237);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CHAPTER -->
+    <table class="chapter" width="100%" height="100%" cellspacing="0">
+      <thead>
+        <tr>
+          <td colspan="12">WILL AVIATION</td>
+        </tr>
+        <tr>
+          <td colspan="2" width="25%">AC TYPE <br />ATR72-600</td>
+          <td colspan="8" rowspan="2">SUBJECT <br />DISK 2ND STAGE POWER TURBINE</td>
+          <td colspan="2" class="task-no" width="25%">TASK CARD NO. <br />3033914</td>
+        </tr>
+        <tr>
+          <td colspan="1">A/C REG<br />HF-CNN</td>
+          <td colspan="1">A/C MSN <br />123455</td>
+          <td colspan="2">WO NO.<br />*WO-9093</td>
+        </tr>
+      </thead>
+      <tr>
+        <td colspan="2">INSP. TYPE</td>
+        <td colspan="8">INTERVAL <br />FH / CYC / MTH</td>
+        <td colspan="2">ATA <br />34</td>
+      </tr>
+      <tr>
+        <td colspan="1">TSN</td>
+        <td colspan="1">CSN</td>
+        <td colspan="4" width="25%">DATE</td>
+        <td colspan="4" width="25%">TSN</td>
+        <td colspan="1">CSN</td>
+        <td colspan="1">DATE</td>
+      </tr>
+      <tr>
+        <td colspan="1">FH</td>
+        <td colspan="1">CYC</td>
+        <td colspan="4"></td>
+        <td colspan="4"></td>
+        <td colspan="1"></td>
+        <td colspan="1"></td>
+      </tr>
+      <tr>
+        <td colspan="12">GENERAL</td>
+      </tr>
+
+      <tr>
+        <td colspan="12" style="text-align: left; border: none">A.References</td>
+      </tr>
+      <tr>
+        <td colspan="6" style="text-align: left; border: none">References :</td>
+        <td colspan="6" style="text-align: left; border: none">Title: ******</td>
+      </tr>
+
+      <tr>
+        <td colspan="12" style="text-align: left; border: none">B. PANELS, ZONE, WORK AREA</td>
+      </tr>
+      <tr>
+        <td colspan="12" style="border: 0; vertical-align: top">
+          <table width="100%" style="border: none">
+            <tr class="general-tr">
+              <th colspan="2" width="200px">PANEL PN</th>
+              <th colspan="2" width="100px">Description</th>
+              <th colspan="2" width="200px">ZONE PN</th>
+              <th colspan="2" width="80px">Description</th>
+              <th colspan="2" width="300px">WORK AREA PN</th>
+              <th colspan="2" width="80px">Description</th>
+            </tr>
+
+            <tr class="general-tr">
+              <td colspan="2">P1</td>
+              <td colspan="2">Lorem, ipsum dolor.</td>
+              <td colspan="2">Z1</td>
+              <td colspan="2">Lorem, ipsum dolor.</td>
+              <td colspan="2">W1</td>
+              <td colspan="2">Lorem, ipsum dolor.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P2</td>
+              <td colspan="2">Sequi, alias numquam?</td>
+              <td colspan="2">Z2</td>
+              <td colspan="2">Quia, iste doloremque.</td>
+              <td colspan="2">W2</td>
+              <td colspan="2">Quibusdam, iusto dolor.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P3</td>
+              <td colspan="2">Sed, voluptatibus distinctio.</td>
+              <td colspan="2">Z3</td>
+              <td colspan="2">Explicabo, cum ab.</td>
+              <td colspan="2">W3</td>
+              <td colspan="2">Inventore, amet deleniti?</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P4</td>
+              <td colspan="2">Tenetur, voluptate autem?</td>
+              <td colspan="2">Z4</td>
+              <td colspan="2">Omnis, excepturi voluptates!</td>
+              <td colspan="2">W4</td>
+              <td colspan="2">Quis, molestiae fugit.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P5</td>
+              <td colspan="2">Quo, incidunt dignissimos.</td>
+              <td colspan="2">Z5</td>
+              <td colspan="2">Eos, ducimus tenetur?</td>
+              <td colspan="2">W5</td>
+              <td colspan="2">Ipsa, quae quaerat?</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P6</td>
+              <td colspan="2">Recusandae, sed vel.</td>
+              <td colspan="2">Z6</td>
+              <td colspan="2">Minus, perspiciatis accusantium.</td>
+              <td colspan="2">W6</td>
+              <td colspan="2">Quia, reprehenderit a?</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P7</td>
+              <td colspan="2">Laudantium, dolor odio.</td>
+              <td colspan="2">Z7</td>
+              <td colspan="2">Quod, repudiandae neque.</td>
+              <td colspan="2">W7</td>
+              <td colspan="2">Similique, reiciendis delectus.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P8</td>
+              <td colspan="2">Eius, aut delectus.</td>
+              <td colspan="2">Z8</td>
+              <td colspan="2">Molestiae, nulla ullam.</td>
+              <td colspan="2">W8</td>
+              <td colspan="2">Perferendis, facere voluptates.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P9</td>
+              <td colspan="2">Temporibus, autem assumenda?</td>
+              <td colspan="2">Z9</td>
+              <td colspan="2">Incidunt, labore expedita.</td>
+              <td colspan="2">W9</td>
+              <td colspan="2">Ex, dolor dolore.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P10</td>
+              <td colspan="2">Ratione, impedit autem.</td>
+              <td colspan="2">Z10</td>
+              <td colspan="2">Aliquam, exercitationem commodi.</td>
+              <td colspan="2">W10</td>
+              <td colspan="2">Est, tenetur quia!</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P11</td>
+              <td colspan="2">Praesentium, in numquam.</td>
+              <td colspan="2">Z11</td>
+              <td colspan="2">Explicabo, eius aperiam.</td>
+              <td colspan="2">W11</td>
+              <td colspan="2">Perspiciatis, doloremque quisquam.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P12</td>
+              <td colspan="2">Quibusdam, illo ex.</td>
+              <td colspan="2">Z12</td>
+              <td colspan="2">Quod, quam minima.</td>
+              <td colspan="2">W12</td>
+              <td colspan="2">A, commodi animi.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P13</td>
+              <td colspan="2">Quod, impedit cumque.</td>
+              <td colspan="2">Z13</td>
+              <td colspan="2">Quidem, suscipit quos.</td>
+              <td colspan="2">W13</td>
+              <td colspan="2">Quasi, soluta fuga.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P14</td>
+              <td colspan="2">Rem, tempore facilis!</td>
+              <td colspan="2">Z14</td>
+              <td colspan="2">Ratione, ex eligendi?</td>
+              <td colspan="2">W14</td>
+              <td colspan="2">Blanditiis, iusto sunt.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P15</td>
+              <td colspan="2">Nulla, adipisci deserunt.</td>
+              <td colspan="2">Z15</td>
+              <td colspan="2">Consectetur, sequi atque.</td>
+              <td colspan="2">W15</td>
+              <td colspan="2">Aspernatur, explicabo. Animi.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P16</td>
+              <td colspan="2">Nulla, adipisci deserunt.</td>
+              <td colspan="2">Z15</td>
+              <td colspan="2">Consectetur, sequi atque.</td>
+              <td colspan="2">W15</td>
+              <td colspan="2">Aspernatur, explicabo. Animi.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P17</td>
+              <td colspan="2">Nulla, adipisci deserunt.</td>
+              <td colspan="2">Z15</td>
+              <td colspan="2">Consectetur, sequi atque.</td>
+              <td colspan="2">W15</td>
+              <td colspan="2">Aspernatur, explicabo. Animi.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P18</td>
+              <td colspan="2">Nulla, adipisci deserunt.</td>
+              <td colspan="2">Z15</td>
+              <td colspan="2">Consectetur, sequi atque.</td>
+              <td colspan="2">W15</td>
+              <td colspan="2">Aspernatur, explicabo. Animi.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P19</td>
+              <td colspan="2">Nulla, adipisci deserunt.</td>
+              <td colspan="2">Z15</td>
+              <td colspan="2">Consectetur, sequi atque.</td>
+              <td colspan="2">W15</td>
+              <td colspan="2">Aspernatur, explicabo. Animi.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P20</td>
+              <td colspan="2">Nulla, adipisci deserunt.</td>
+              <td colspan="2">Z15</td>
+              <td colspan="2">Consectetur, sequi atque.</td>
+              <td colspan="2">W15</td>
+              <td colspan="2">Aspernatur, explicabo. Animi.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P21</td>
+              <td colspan="2">Nulla, adipisci deserunt.</td>
+              <td colspan="2">Z15</td>
+              <td colspan="2">Consectetur, sequi atque.</td>
+              <td colspan="2">W15</td>
+              <td colspan="2">Aspernatur, explicabo. Animi.</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">P22</td>
+              <td colspan="2">Nulla, adipisci deserunt.</td>
+              <td colspan="2">Z15</td>
+              <td colspan="2">Consectetur, sequi atque.</td>
+              <td colspan="2">W15</td>
+              <td colspan="2">Aspernatur, explicabo. Animi.</td>
+            </tr>
+
+              <tr class="general-tr">
+                <td colspan="2">PP01</td>
+                <td colspan="2">Lorem, ipsum dolor.</td>
+                <td colspan="2">ZP01</td>
+                <td colspan="2">Lorem, ipsum dolor.</td>
+                <td colspan="2">WAP01</td>
+                <td colspan="2">Lorem, ipsum dolor.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP02</td>
+                <td colspan="2">Sed, a beatae!</td>
+                <td colspan="2">ZP02</td>
+                <td colspan="2">Alias, error perspiciatis.</td>
+                <td colspan="2">WAP02</td>
+                <td colspan="2">Consequatur, nulla natus?</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP03</td>
+                <td colspan="2">Nostrum, delectus neque?</td>
+                <td colspan="2">ZP03</td>
+                <td colspan="2">At, dolorem distinctio.</td>
+                <td colspan="2">WAP03</td>
+                <td colspan="2">Est, reiciendis atque.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP04</td>
+                <td colspan="2">At, aperiam eligendi.</td>
+                <td colspan="2">ZP04</td>
+                <td colspan="2">Illo, fugiat odio?</td>
+                <td colspan="2">WAP04</td>
+                <td colspan="2">Voluptates, reiciendis voluptatibus.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP05</td>
+                <td colspan="2">Minus, dicta iste!</td>
+                <td colspan="2">ZP05</td>
+                <td colspan="2">Voluptatem, officia asperiores.</td>
+                <td colspan="2">WAP05</td>
+                <td colspan="2">Dolores, tempora laudantium.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP06</td>
+                <td colspan="2">Voluptate, commodi hic.</td>
+                <td colspan="2">ZP06</td>
+                <td colspan="2">Aut, laudantium culpa?</td>
+                <td colspan="2">WAP06</td>
+                <td colspan="2">Natus, numquam qui!</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP07</td>
+                <td colspan="2">Sapiente, quasi odio!</td>
+                <td colspan="2">ZP07</td>
+                <td colspan="2">Explicabo, natus delectus?</td>
+                <td colspan="2">WAP07</td>
+                <td colspan="2">Placeat, sint sequi!</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP08</td>
+                <td colspan="2">Cupiditate, facilis numquam!</td>
+                <td colspan="2">ZP08</td>
+                <td colspan="2">Est, aspernatur libero!</td>
+                <td colspan="2">WAP08</td>
+                <td colspan="2">Voluptas, dolores incidunt.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP09</td>
+                <td colspan="2">Maxime, fuga veritatis.</td>
+                <td colspan="2">ZP09</td>
+                <td colspan="2">Unde, molestias magnam.</td>
+                <td colspan="2">WAP09</td>
+                <td colspan="2">Repellendus, ipsa dolor.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP10</td>
+                <td colspan="2">Nobis, magni eaque.</td>
+                <td colspan="2">ZP10</td>
+                <td colspan="2">Inventore, vitae obcaecati.</td>
+                <td colspan="2">WAP10</td>
+                <td colspan="2">Eveniet, repudiandae nobis!</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP11</td>
+                <td colspan="2">Nam, sunt repellat.</td>
+                <td colspan="2">ZP11</td>
+                <td colspan="2">Iusto, provident cum?</td>
+                <td colspan="2">WAP11</td>
+                <td colspan="2">Optio, doloremque doloribus!</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP12</td>
+                <td colspan="2">Itaque, impedit illum!</td>
+                <td colspan="2">ZP12</td>
+                <td colspan="2">Fugiat, sit quod?</td>
+                <td colspan="2">WAP12</td>
+                <td colspan="2">Eum, dolore magnam?</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP13</td>
+                <td colspan="2">Dicta, ratione sint!</td>
+                <td colspan="2">ZP13</td>
+                <td colspan="2">Minima, veniam quas.</td>
+                <td colspan="2">WAP13</td>
+                <td colspan="2">Animi, cupiditate nemo.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP14</td>
+                <td colspan="2">Ratione, obcaecati saepe!</td>
+                <td colspan="2">ZP14</td>
+                <td colspan="2">Repellat, qui natus.</td>
+                <td colspan="2">WAP14</td>
+                <td colspan="2">Numquam, a molestias.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP15</td>
+                <td colspan="2">Eum, dolore ex.</td>
+                <td colspan="2">ZP15</td>
+                <td colspan="2">Ad, odit optio!</td>
+                <td colspan="2">WAP15</td>
+                <td colspan="2">Perspiciatis, placeat totam.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP16</td>
+                <td colspan="2">Earum, inventore quibusdam.</td>
+                <td colspan="2">ZP16</td>
+                <td colspan="2">Velit, amet tempora.</td>
+                <td colspan="2">WAP16</td>
+                <td colspan="2">Rerum, quam ipsum!</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP17</td>
+                <td colspan="2">Modi, corporis officiis.</td>
+                <td colspan="2">ZP17</td>
+                <td colspan="2">Velit, at iure.</td>
+                <td colspan="2">WAP17</td>
+                <td colspan="2">Atque, placeat eveniet.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP18</td>
+                <td colspan="2">Beatae, officia vitae!</td>
+                <td colspan="2">ZP18</td>
+                <td colspan="2">Deserunt, rem? Voluptas!</td>
+                <td colspan="2">WAP18</td>
+                <td colspan="2">Adipisci, optio ullam!</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP19</td>
+                <td colspan="2">Rerum, modi natus!</td>
+                <td colspan="2">ZP19</td>
+                <td colspan="2">Unde, reprehenderit repudiandae.</td>
+                <td colspan="2">WAP19</td>
+                <td colspan="2">Placeat, error ad!</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP20</td>
+                <td colspan="2">Aliquam, animi obcaecati.</td>
+                <td colspan="2">ZP20</td>
+                <td colspan="2">Quod, incidunt est?</td>
+                <td colspan="2">WAP20</td>
+                <td colspan="2">Reprehenderit, aliquam nisi.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP21</td>
+                <td colspan="2">Asperiores, cumque impedit.</td>
+                <td colspan="2">ZP21</td>
+                <td colspan="2">Repudiandae, nisi esse.</td>
+                <td colspan="2">WAP21</td>
+                <td colspan="2">Dicta, totam id.</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP22</td>
+                <td colspan="2">Fugit, officiis fuga.</td>
+                <td colspan="2">ZP22</td>
+                <td colspan="2">Nihil, consectetur itaque.</td>
+                <td colspan="2">WAP22</td>
+                <td colspan="2">Autem, magni ipsa!</td>
+              </tr>
+              <tr class="general-tr">
+                <td colspan="2">PP23</td>
+                <td colspan="2">Ipsum, quis aliquid!</td>
+                <td colspan="2">ZP23</td>
+                <td colspan="2">Sequi, vero numquam!</td>
+                <td colspan="2">WAP23</td>
+                <td colspan="2">Ipsa, ad quasi!</td>
+              </tr>
+            <tr>
+              <td colspan="12" style="text-align: left; border: none">C. SKILL, MAN HOURS</td>
+            </tr>
+            <tr class="general-tr">
+              <th colspan="6" width="50%">SKILL</th>
+              <th colspan="6" width="50%">MAN HOURS</th>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">1Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">2Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">3Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">4Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">5Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">6Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">7Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">8Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">9Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">10Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">11Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6" width="50%">12Lorem, ipsum.</td>
+              <td colspan="6" width="50%">23</td>
+            </tr>
+            <tr>
+              <td colspan="12" style="text-align: left; border: none">D. Consumable Materials</td>
+            </tr>
+
+            <tr class="general-tr">
+              <th colspan="2">PN</th>
+              <th colspan="4">Description</th>
+              <th colspan="4">Possible/Definite</th>
+              <th colspan="2">QTY</th>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">A</td>
+              <td colspan="4">Lorem ipsum dolor sit.</td>
+              <td colspan="4">dolor sit.</td>
+              <td colspan="2">4</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">A</td>
+              <td colspan="4">Lorem ipsum dolor sit.</td>
+              <td colspan="4">dolor sit.</td>
+              <td colspan="2">4</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">A</td>
+              <td colspan="4">Lorem ipsum dolor sit.</td>
+              <td colspan="4">dolor sit.</td>
+              <td colspan="2">4</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">A</td>
+              <td colspan="4">Lorem ipsum dolor sit.</td>
+              <td colspan="4">dolor sit.</td>
+              <td colspan="2">4</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="2">A</td>
+              <td colspan="4">Lorem ipsum dolor sit.</td>
+              <td colspan="4">dolor sit.</td>
+              <td colspan="2">4</td>
+            </tr>
+
+            <tr>
+              <td colspan="12" style="text-align: left; border: none">
+                E. Fixtures, Tools, Test Stand Support Equipment
+              </td>
+            </tr>
+            <tr class="general-tr">
+              <th colspan="6">PN</th>
+              <th colspan="6">Description</th>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6">6767</td>
+              <td colspan="6">PALU</td>
+            </tr>
+            <tr class="general-tr">
+              <td colspan="6">ATES</td>
+              <td colspan="6">RAJA</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="12" style="text-align: left; border: none">
+          <span style="margin: 10px;">F. INSTRUCTION</span>
+          <hr>
+        </td>
+      </tr>
+      <tr style="height: 100%;">
+        <td colspan="12" style="height: 100px; border: none; "></td>
+      </tr>
+
+      <tr style="height: 100%">
+        <td colspan="12" style="height: 100px; border-top: none;"></td>
+      </tr>
+      <tr>
+        <td colspan="2">START TIME</td>
+        <td colspan="2">FINISH TIME</td>
+        <td colspan="4">TOTAL MAN HOURS</td>
+        <td colspan="4" rowspan="2" style="text-align: left; border-bottom: none">
+          <span>DEFECT FOUND:</span><br />
+          <input type="checkbox" id="defect-found-yes" /><label for="defect-found-yes">YES</label>
+          <input type="checkbox" id="defect-found-no" /><label for="defect-found-no">NO</label>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" rowspan="2"></td>
+        <td colspan="2" rowspan="2"></td>
+        <td colspan="2" width="10%">Est.</td>
+        <td colspan="2" width="10%">Actual</td>
+      </tr>
+      <tr>
+        <td colspan="2"></td>
+        <td colspan="2"></td>
+        <td colspan="4" style="text-align: left; border-top: none">Log No.</td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <span>R.II </span>
+          <input type="checkbox" id="rii-yes" /><label for="rii-yes">YES</label>
+          <input type="checkbox" id="rii-no" /><label for="rii-no">NO</label>
+        </td>
+        <td colspan="6">RELEASED BY</td>
+      </tr>
+      <tr>
+        <td colspan="2">DATE</td>
+        <td colspan="4">INSP. SIGN &STAMP</td>
+        <td colspan="3">Date</td>
+        <td colspan="2">SIGNATURE</td>
+        <td colspan="1">AUTH. NO</td>
+      </tr>
+      <tr style="height: 80px">
+        <td colspan="2"></td>
+        <td colspan="4"></td>
+        <td colspan="3"></td>
+        <td colspan="2"></td>
+        <td colspan="1"></td>
+      </tr>
+    </table>
+
+    <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+    <script>
+      class RepeatTableHeadersHandler extends Paged.Handler {
+        constructor(chunker, polisher, caller) {
+          super(chunker, polisher, caller);
+          this.splitTablesRefs = [];
+        }
+
+        afterPageLayout(pageElement, page, breakToken, chunker) {
+          this.chunker = chunker;
+          this.splitTablesRefs = [];
+
+          if (breakToken) {
+            const node = breakToken.node;
+            const tables = this.findAllAncestors(node, "table");
+            if (node.tagName === "TABLE") tables.push(node);
+
+            if (tables.length > 0) {
+              this.splitTablesRefs = tables.map((t) => t.dataset.ref);
+
+              let thead = node.tagName === "THEAD" ? node : this.findFirstAncestor(node, "thead");
+              if (thead) {
+                let lastTheadNode = thead.hasChildNodes() ? thead.lastChild : thead;
+                breakToken.node = this.nodeAfter(lastTheadNode, chunker.source);
+              }
+
+              this.hideEmptyTables(pageElement, node);
+            }
+          }
+        }
+
+        hideEmptyTables(pageElement, breakTokenNode) {
+          this.splitTablesRefs.forEach((ref) => {
+            let table = pageElement.querySelector("[data-ref='" + ref + "']");
+            if (table) {
+              let sourceBody = table.querySelector("tbody > tr");
+              if (!sourceBody || this.refEquals(sourceBody.firstElementChild, breakTokenNode)) {
+                table.style.visibility = "hidden";
+                table.style.position = "absolute";
+                let lineSpacer = table.nextSibling;
+                if (lineSpacer) {
+                  lineSpacer.style.visibility = "hidden";
+                  lineSpacer.style.position = "absolute";
+                }
+              }
+            }
+          });
+        }
+
+        refEquals(a, b) {
+          return a && a.dataset && b && b.dataset && a.dataset.ref === b.dataset.ref;
+        }
+
+        findFirstAncestor(element, selector) {
+          while (element.parentNode && element.parentNode.nodeType === 1) {
+            if (element.parentNode.matches(selector)) return element.parentNode;
+            element = element.parentNode;
+          }
+          return null;
+        }
+
+        findAllAncestors(element, selector) {
+          const ancestors = [];
+          while (element.parentNode && element.parentNode.nodeType === 1) {
+            if (element.parentNode.matches(selector)) ancestors.unshift(element.parentNode);
+            element = element.parentNode;
+          }
+          return ancestors;
+        }
+
+        layout(rendered, layout) {
+          this.splitTablesRefs.forEach((ref) => {
+            const renderedTable = rendered.querySelector("[data-ref='" + ref + "']");
+            if (renderedTable) {
+              if (!renderedTable.getAttribute("repeated-headers")) {
+                const sourceTable = this.chunker.source.querySelector("[data-ref='" + ref + "']");
+                this.repeatColgroup(sourceTable, renderedTable);
+                this.repeatTHead(sourceTable, renderedTable);
+                renderedTable.setAttribute("repeated-headers", true);
+              }
+            }
+          });
+        }
+
+        repeatColgroup(sourceTable, renderedTable) {
+          let colgroup = sourceTable.querySelectorAll("colgroup");
+          let firstChild = renderedTable.firstChild;
+          colgroup.forEach((colgroup) => {
+            let clonedColgroup = colgroup.cloneNode(true);
+            renderedTable.insertBefore(clonedColgroup, firstChild);
+          });
+        }
+
+        repeatTHead(sourceTable, renderedTable) {
+          let thead = sourceTable.querySelector("thead");
+          if (thead) {
+            let clonedThead = thead.cloneNode(true);
+            renderedTable.insertBefore(clonedThead, renderedTable.firstChild);
+          }
+        }
+
+        nodeAfter(node, limiter) {
+          if (limiter && node === limiter) return;
+          let significantNode = this.nextSignificantNode(node);
+          if (significantNode) return significantNode;
+          if (node.parentNode) {
+            while ((node = node.parentNode)) {
+              if (limiter && node === limiter) return;
+              significantNode = this.nextSignificantNode(node);
+              if (significantNode) return significantNode;
+            }
+          }
+        }
+
+        nextSignificantNode(sib) {
+          while ((sib = sib.nextSibling)) {
+            if (!this.isIgnorable(sib)) return sib;
+          }
+          return null;
+        }
+
+        isIgnorable(node) {
+          return node.nodeType === 8 || (node.nodeType === 3 && this.isAllWhitespace(node));
+        }
+
+        isAllWhitespace(node) {
+          return !/[^\t\n\r ]/.test(node.textContent);
+        }
+
+        afterRendered(pages) {
+          this.setDateToTopRight();
+          // window.print();
+        }
+
+        setDateToTopRight() {
+          const today = new Date();
+          const todayLocal = today.toLocaleString("id-ID");
+          const topRight = document.querySelectorAll(".pagedjs_margin-top-right");
+          const topRightContent = document.querySelectorAll(".pagedjs_margin-top-right .pagedjs_margin-content");
+          topRight.forEach((e) => {
+            e.classList.add("hasContent");
+          });
+          topRightContent.forEach((e) => {
+            e.innerHTML = todayLocal;
+          });
+        }
+      }
+
+      Paged.registerHandlers(RepeatTableHeadersHandler);
+    </script>
+  </body>
+</html>
